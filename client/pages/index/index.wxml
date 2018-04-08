@@ -1,0 +1,13 @@
+<swiper class='swiper' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{swipers}}" wx:key="{{index}}">
+    <swiper-item>
+      <image mode="aspectFill" src="{{item.src}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="container">
+  <view class='box' wx:for="{{news}}" wx:key="{{index}}">
+    <image mode="aspectFill" src="{{item.src}}" class="image"/>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="cover">
+  <image mode="aspectFill" src='https://modao.cc/uploads3/images/1826/18265626/raw_1522114198.jpeg'></image>
+</view>
+<view class='info'>
+<view class='title'>2017年春 云香 临沧古树藤条茶 普洱茶生茶 357g/饼</view>
+<view class='price'>￥360 <text class='price-tag'>促销价</text></view>
+<view class='price-extra'>
+  <view class='price-extra-item'>原价： <text class='regular_price'>￥500</text></view>
+  <view class='price-extra-item adder'>北京仓</view>
+</view>
+</view>
+
+<view class='detail'>
+  
+</view>

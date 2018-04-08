@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/product/product",
+    "pages/product-detail/product-detail",
+    "pages/article/article",
+    "pages/article-detail/article-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#9b4dca",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon-home.png",
+        "selectedIconPath": "images/icon-home-active.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "全部宝贝",
+        "iconPath": "images/icon-all.png",
+        "selectedIconPath": "images/icon-all-active.png"
+      },
+      {
+        "pagePath": "pages/article/article",
+        "text": "茶山茶事",
+        "iconPath": "images/icon-tea.png",
+        "selectedIconPath": "images/icon-tea-active.png"
+      }
+    ]
+  }
+}

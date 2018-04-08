@@ -1,0 +1,22 @@
+/**index.wxss**/
+.container{
+  margin:15px;
+}
+.swiper{
+  background: #000;
+  width: 100%;
+  height: 150px;
+}
+.slide-image{
+  width: 100%;
+  height: 150px;
+  display: block
+}
+.box {
+  margin-top: 10px;
+}
+.box .image {
+  width: 100%;
+  height: 100px;
+  display: block
+}

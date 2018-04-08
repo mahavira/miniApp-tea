@@ -1,0 +1,15 @@
+<view class="filter">
+  <input class='input' placeholder="搜索文章"/>
+  <view class='filter-icon'>
+    <view class='btn btn-search'>
+      <image src='/images/icon-search.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class="container">
+  <view class='box' wx:for="{{news}}" wx:key="{{index}}">
+    <image mode="aspectFill" src="{{item.src}}" class="image"/>
+    <view class='title'>{{item.title}}</view>
+  </view>
+</view>

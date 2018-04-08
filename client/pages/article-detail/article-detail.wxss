@@ -1,0 +1,9 @@
+.title{
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  margin: 15px 15px 20px;
+}
+.content{
+  padding: 15px;
+}

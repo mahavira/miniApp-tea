@@ -1,0 +1,41 @@
+.cover{
+  text-align: center;
+}
+.cover image{
+  width: 280px;
+  height: 280px;
+}
+.info{
+  padding: 20px;
+}
+.title{
+  color: #555;
+  font-size: 16px;
+}
+.price{
+  margin-top: 15px;
+  font-size: 25px;
+  color: #F00;
+  vertical-align: middle;
+}
+.price-tag{
+  border: 1px solid #F00;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 1px 3px;
+  display: inline-block;
+}
+.price-extra{
+  display: flex
+}
+.price-extra-item{
+  flex: 1;
+  font-size: 14px;
+  color: #888
+}
+.regular_price{
+  text-decoration: line-through;
+}
+.adder{
+  text-align: right;
+}
