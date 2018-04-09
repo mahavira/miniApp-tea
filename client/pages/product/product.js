@@ -8,15 +8,14 @@ Page({
     visibleFilter: false,
     isMore: true,
     loading: false,
-    search: '',
     filterDefault: {
       page: 1,
-      per_page: 10,
+      per_page: 8,
       type: 'simple'
     },
     filter: {
       page: 1,
-      per_page: 10,
+      per_page: 8,
       type: 'simple'
     },
     attributes: {
@@ -82,7 +81,16 @@ Page({
   onReady: function () {
     this.getAttributes()
   },
-
+  onPullDownRefresh () {
+    var filter = this.data.filter
+    filter.page = 1
+    this.setData({
+      filter
+    })
+    this.fetch().then(e=>{
+      wx.stopPullDownRefresh()
+    })
+  },
   toggleFilter() {
     this.setData({
       visibleFilter: !this.data.visibleFilter
@@ -92,22 +100,26 @@ Page({
     this.setData({
       loading: true
     })
-    api('/wc/v2/products', this.data.filter).then(res => {
-      var products = []
-      if (this.data.filter.page === 1) {
-        products = res
-      } else {
-        products = [...this.data.products, ...res]
-      }
-      var isMore = res.length === this.data.filter.per_page
-      this.setData({
-        products: products,
-        loading: false,
-        isMore: isMore
-      })
-    }).catch(res => {
-      this.setData({
-        loading: false
+    return new Promise((resolve, reject) => {
+      api('/wc/v2/products', this.data.filter).then(res => {
+        var products = []
+        if (this.data.filter.page === 1) {
+          products = res
+        } else {
+          products = [...this.data.products, ...res]
+        }
+        var isMore = res.length === this.data.filter.per_page
+        this.setData({
+          products: products,
+          loading: false,
+          isMore: isMore
+        })
+        resolve()
+      }).catch(res => {
+        this.setData({
+          loading: false
+        })
+        resolve()
       })
     })
   },
@@ -178,19 +190,14 @@ Page({
     })
     this.fetch()
   },
-  bindInput: function (e) {
-    this.setData({
-      search: e.detail.value
-    })
-  },
-  searchSubmit (e) {
+  handleConfirm (e) {
     this.setData({
       attributesSelected: {
         key: '',
         value: ''
       },
       filter: Object.assign({}, this.data.filterDefault, {
-        search: this.data.search
+        search: e.detail.value
       })
     })
     this.fetch()

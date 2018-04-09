@@ -3,9 +3,8 @@
   left: 0;
   top: 0;
   width: 100%;
-  background: #FFF;
   box-sizing: border-box;
-  padding:5px 15px;
+  padding:2px 15px 5px;
 }
 .filter {
   display: flex;

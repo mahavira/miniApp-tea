@@ -1,15 +1,14 @@
 <view class="filter">
-  <input class='input' placeholder="搜索文章" bindinput='bindInput'/>
+  <input class='input' placeholder="搜索文章" bindconfirm="bindConfirm" confirm-type="search"/>
   <view class='filter-icon'>
     <view class='btn btn-search'>
-      <image src='/images/icon-search.png' bindtap='searchSubmit'></image>
+      <image src='/images/icon-search.png' mode="aspectFill"></image>
     </view>
   </view>
 </view>
-
 <view class="container">
   <navigator class='box' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
-    <image mode="aspectFill" src="{{images[item.id]}}" class="image"/>
+    <image mode="aspectFill" src="{{images[item.featured_media]}}" class="image"/>
     <view class='title'>{{item.title.rendered}}</view>
   </navigator>
 </view>

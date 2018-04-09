@@ -5,15 +5,14 @@ Page({
     images: {},
     isMore: true,
     loading: false,
-    search: '',
     filterDefault: {
       page: 1,
-      per_page: 2,
+      per_page: 5,
       context: 'embed'
     },
     filter: {
       page: 1,
-      per_page: 2,
+      per_page: 5,
       context: 'embed'
     },
   },
@@ -23,11 +22,21 @@ Page({
   onLoad: function () {
     this.fetch()
   },
+  onPullDownRefresh() {
+    var filter = this.data.filter
+    filter.page = 1
+    this.setData({
+      filter
+    })
+    this.fetch().then(e => {
+      wx.stopPullDownRefresh()
+    })
+  },
   fetch() {
     this.setData({
       loading: true
     })
-    api('/wp/v2/posts', this.data.filter).then(res => {
+    return api('/wp/v2/posts', this.data.filter).then(res => {
       var articles = []
       if (this.data.filter.page === 1) {
         articles = res
@@ -44,15 +53,14 @@ Page({
 
       var prs = []
       res.forEach(n => {
-        if (!n.featured_media || this.data.images[n.id]) return
+        if (!n.featured_media || this.data.images[n.featured_media]) return
         prs.push(api('/wp/v2/media/' + n.featured_media))
       })
       return Promise.all(prs)
     }).then(res=>{
-      console.log(res)
       var images = this.data.images
       res.forEach(n=>{
-        images[n.post] = n.source_url
+        images[n.id] = n.source_url
       })
       this.setData({
         images
@@ -71,15 +79,10 @@ Page({
     })
     this.fetch()
   },
-  bindInput (e) {
-    this.setData({
-      search: e.detail.value
-    })
-  },
-  searchSubmit(e) {
+  bindConfirm (e) {
     this.setData({
       filter: Object.assign({}, this.data.filterDefault, {
-        search: this.data.search
+        search: e.detail.value
       })
     })
     this.fetch()
