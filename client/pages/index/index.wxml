@@ -8,7 +8,7 @@
 </swiper>
 <view class="container">
   <navigator class='box' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
-    <image mode="aspectFill" src="{{articleImages[item.id]}}" class="image"/>
+    <image mode="aspectFill" src="{{articleImages[item.featured_media]}}" class="image"/>
   </navigator>
   <navigator class='box' wx:for="{{products}}" wx:key="{{index}}" url="/pages/product-detail/product-detail?id={{item.id}}">
     <image mode="aspectFill" src="{{item.images[0].src}}" class="image"/>

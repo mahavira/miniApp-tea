@@ -11,12 +11,12 @@ Page({
     search: '',
     filterDefault: {
       page: 1,
-      per_page: 6,
+      per_page: 10,
       type: 'simple'
     },
     filter: {
       page: 1,
-      per_page: 6,
+      per_page: 10,
       type: 'simple'
     },
     attributes: {
@@ -130,7 +130,6 @@ Page({
           attributes[n.slug].options = res
         })
       })
-      console.log(attributes)
       return Promise.all(prs)
     }).then(res => {
       this.setData({ attributes })

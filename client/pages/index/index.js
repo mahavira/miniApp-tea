@@ -55,7 +55,7 @@ Page({
     }).then(res => {
       var images = this.data.articleImages
       res.forEach(n => {
-        images[n.post] = n.source_url
+        images[n.id] = n.source_url
       })
       this.setData({
         articleImages: images

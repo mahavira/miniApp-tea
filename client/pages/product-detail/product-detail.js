@@ -27,7 +27,7 @@ Page({
       WxParse.wxParse('content', 'html', res.description, this, 15);
 
       if (res.type === 'grouped') {
-        res.upsell_ids.map(n=>{
+        res.grouped_products.map(n=>{
           this.fetchSimple(n)
         })
       }
