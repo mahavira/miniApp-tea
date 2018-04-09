@@ -1,106 +1,53 @@
 <view class="filter-wrp">
-<view class="filter">
-  <input class='input' placeholder="搜索宝贝"/>
-  <view class='filter-icon'>
-    <view class='btn btn-search'>
-      <image src='/images/icon-search.png'></image>
+  <view class="filter">
+    <input class='input' placeholder="搜索宝贝" value='{{search}}' bindinput="bindInput" confirm-type="search"/>
+    <view class='filter-icon'>
+      <view class='btn btn-search' bindtap="searchSubmit">
+        <image src='/images/icon-search.png'></image>
+      </view>
+      <view class='btn btn-money' bindtap='handleOrder'>
+        价格
+        <image src='/images/icon-sort.png'></image>
+      </view>
+      <view class='btn btn-type' bindtap="toggleFilter">过滤
+        <image src='/images/icon-filter.png'></image>
+      </view>
     </view>
-    <view class='btn btn-money'>
-      价格
-      <image src='/images/icon-sort.png'></image>
-    </view>
-    <view class='btn btn-type' bindtap="toggleFilter">过滤
-      <image src='/images/icon-filter.png'></image>
-    </view>
-
   </view>
-</view>
 </view>
 
 <view class='products'>
-  <view class='product' wx:for="{{products}}" wx:key="index">
+  <navigator class='product' wx:for="{{products}}" wx:key="index" url="/pages/product-detail/product-detail?id={{item.id}}">
     <image mode="aspectFill" src='{{item.images[0].name}}' src='{{item.images[0].src}}'></image>
     <view class='title'>{{item.name}}</view>
     <view class='money'>
       <text class='discount'>￥{{item.price}}</text>
       <text class='price'>￥{{item.regular_price}}</text>
     </view>
-  </view>
+  </navigator>
 </view>
 <view wx:if="{{isMore&&!loading}}" class='more' bindtap='loadMore'>加载更多</view>
 <view wx:if="{{!isMore&&!loading}}" class='more'>没有了</view>
 <view wx:if="{{loading}}" class='more'>正在加载...</view>
 
 <view class="filter-panel {{visibleFilter?'open':''}}">
+  <view class='mask'></view>
   <scroll-view scroll-y class='filter-container'>
-    <view class='term'>
-      <view class='term-hd'>新品</view>
+    <view class='term' wx:for="{{attributes}}" wx:key="{{index}}" wx:for-index="pa" wx:for-item="item">
+      <view class='term-hd' wx:if="{{pa=='pa_new'}}">{{item.name}}</view>
+      <view class='term-hd' wx:else>按{{item.name}}找茶</view>
       <view class='term-opts'>
-        <view class='term-opt'>全部</view>
-        <view class='term-opt'>春茶</view>
-      </view>
-    </view>
-    
-    <view class='term'>
-      <view class='term-hd'>按系列找茶</view>
-      <view class='term-opts'>
-        <view class='term-opt'>单株</view>
-        <view class='term-opt active'>珍藏</view>
-        <view class='term-opt'>收藏</view>
-        <view class='term-opt'>品鉴</view>
-        <view class='term-opt'>入门</view>
-        <view class='term-opt'>其他产品</view>
-      </view>
-    </view>
-
-    <view class='term'>
-      <view class='term-hd'>按价格找茶</view>
-      <view class='term-opts'>
-        <view class='term-opt'>150</view>
-        <view class='term-opt'>300</view>
-        <view class='term-opt'>500</view>
-        <view class='term-opt'>800</view>
-        <view class='term-opt'>1500</view>
-        <view class='term-opt'>3000</view>
-        <view class='term-opt'>6000</view>
-      </view>
-    </view>
-
-    <view class='term'>
-      <view class='term-hd'>按工艺找茶</view>
-      <view class='term-opts'>
-        <view class='term-opt'>全部</view>
-        <view class='term-opt'>春茶</view>
-        <view class='term-opt'>春茶</view>
-        <view class='term-opt'>春茶</view>
-      </view>
-    </view>
-
-    <view class='term'>
-      <view class='term-hd'>按地区找茶</view>
-      <view class='term-opts'>
-        <view class='term-opt'>全部</view>
-        <view class='term-opt'>春茶</view>
-        <view class='term-opt'>春茶</view>
-        <view class='term-opt'>春茶</view>
-      </view>
-    </view>
-
-    <view class='term'>
-      <view class='term-hd'>按年份找茶</view>
-      <view class='term-opts'>
-        <view class='term-opt'>2017</view>
-        <view class='term-opt'>2016</view>
-        <view class='term-opt'>2015</view>
-        <view class='term-opt'>中期茶</view>
-        <view class='term-opt'>老陈茶</view>
+        <view class='term-opt {{attributesSelected.key==pa&&attributesSelected.value==option.id?"active":""}}' bindtap='handleAttr'
+        wx:for="{{item.options}}" wx:key="{{optionIndex}}"
+        wx:for-index="optionIndex" wx:for-item="option"
+        data-id="{{option.id}}" data-name="{{option.name}}" data-attr="{{pa}}">{{option.name}}</view>
       </view>
     </view>
 
   </scroll-view>
 
-  <view class='term-btns'>
+   <view class='term-btns'>
     <view class='term-btn close' catch:touchstart="toggleFilter">关闭</view>
-    <view class='term-btn'>确定</view>
-  </view>
+     <view class='term-btn' catch:touchstart="resetFilter">重置</view> 
+  </view> 
 </view>

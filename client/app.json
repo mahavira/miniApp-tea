@@ -25,7 +25,7 @@
       },
       {
         "pagePath": "pages/product/product",
-        "text": "全部宝贝",
+        "text": "全部商品",
         "iconPath": "images/icon-all.png",
         "selectedIconPath": "images/icon-all-active.png"
       },

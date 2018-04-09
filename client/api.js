@@ -3,7 +3,7 @@ const BASE_URL = 'https://ajmz7nov.qcloud.la/'
 const USERNAME = 'ck_594a4d4da38c0ab8eea71d0815507fe3afd2c98c'
 const PASSWORD = 'cs_ac542d5e7e34e20127c248325677713bc207f497'
 const Authorization = "Basic " + base64.encoder(USERNAME + ":" + PASSWORD)
-function api(url, params) {
+function api(url, params = {}) {
   return new Promise((resolve, reject) => {
     params.rest_route = url
     wx.request({
@@ -14,7 +14,7 @@ function api(url, params) {
         'Authorization': Authorization
       },
       success: function (res) {
-        resolve(res)
+        resolve(res.data)
       },
       error: function (res){
         alert(res)

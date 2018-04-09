@@ -1,5 +1,5 @@
-<view class="title">魂牵梦萦魂牵梦萦</view>
-<scroll-view class='content'>
-fdsa fdsa 
-fdsa fdsa
-</scroll-view>
+<view class="title">{{article.title.rendered}}</view>
+<view class='content'>
+  <import src="/wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>

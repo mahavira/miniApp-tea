@@ -39,3 +39,55 @@
 .adder{
   text-align: right;
 }
+.detail{
+  padding: 20px;
+  font-size: 14px;
+}
+.products {
+  display: flex;
+  margin: 20px 15px 0;
+  font-size: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+  border-top: 1px solid #eee;
+border-bottom: 1px solid #eee;
+}
+
+.product {
+  flex: 0 0 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.product image {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product .title {
+  text-align: left;
+  padding: 0 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+  height: 20px;
+}
+
+.product .money {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.product .money .discount {
+  color: #f00;
+  margin-right: 10px;
+}
+
+.product .money .price {
+  color: #aaa;
+  font-size: 14px;
+  text-decoration: line-through;
+}

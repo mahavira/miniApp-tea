@@ -57,3 +57,9 @@
   padding: 5px;
   box-sizing: border-box;
 }
+.more {
+  font-size: 14px;
+  padding: 20px;
+  color: #999;
+  text-align: center;
+}

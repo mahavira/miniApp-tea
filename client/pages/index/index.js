@@ -1,130 +1,66 @@
-//index.js
-//获取应用实例
-var qcloud = require('../../vendor/wafer2-client-sdk/index')
-var config = require('../../config')
-var util = require('../../utils/util.js')
-const app = getApp()
-let winWidth = 0
-wx.getSystemInfo({
-  success: res => {
-    winWidth = res.windowWidth
-  }
-})
-
+import { api } from '../../api'
 var swipers = [{
   id: 0,
   src: 'https://gdp.alicdn.com/imgextra/i1/2429209411/TB24qEJc3MPMeJjy1XbXXcwxVXa_!!2429209411.jpg',
 }, {
   id: 0,
   src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-  }, {
-    id: 0,
-    src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-  }]
-
-var news = [{
-  id: 0,
-  src: 'http://www.shuiyunpu.com/data/afficheimg/1363305521165308401.jpg',
-}, {
-  id: 0,
-  src: 'http://www.shuiyunpu.com/data/afficheimg/1363305481883537386.jpg',
-}, {
-  id: 0,
-  src: 'http://www.shuiyunpu.com/data/afficheimg/1363305537575471029.jpg',
 }, {
   id: 0,
   src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
 }]
+
 Page({
   data: {
-    swipers: [],
-    news: [],
+    swipers: swipers,
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    articles: [],
+    articleImages: {},
+    products: []
   },
-  onLoad(){
-    qcloud.setLoginUrl(config.service.loginUrl)
-
-    this.setData({
-      swipers: swipers,
-      news: news
-    })
-    this.loadList(this.data.swipers, res => {
+  onLoad() {
+    this.fetchArticle()
+    this.fetchProduct()
+  },
+  fetchProduct() {
+    api('/wc/v2/products', {
+      per_page: 5,
+      type: 'grouped'
+    }).then(res => {
       this.setData({
-        swipers: res
+        products: res
       })
+    }).catch(res => {
     })
-    this.loadList(this.data.news, res => {
+  },
+  fetchArticle() {
+    api('/wp/v2/posts', {
+      per_page: 5,
+      context: 'embed'
+    }).then(res => {
       this.setData({
-        news: res
+        articles: res
       })
-    })
-    // this.login()
-  },
-  // 用户登录示例
-  login: function () {
-    if (this.data.logged) return
 
-    util.showBusy('正在登录')
-    var that = this
-    // 调用登录接口
-    qcloud.login({
-      success(result) {
-        if (result) {
-          util.showSuccess('登录成功')
-          that.setData({
-            userInfo: result,
-            logged: true
-          })
-        } else {
-          // 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
-          qcloud.request({
-            url: config.service.requestUrl,
-            login: true,
-            success(result) {
-              util.showSuccess('登录成功')
-              that.setData({
-                userInfo: result.data.data,
-                logged: true
-              })
-            },
-
-            fail(error) {
-              util.showModel('请求失败', error)
-              console.log('request fail', error)
-            }
-          })
-        }
-      },
-
-      fail(error) {
-        util.showModel('登录失败', error)
-        console.log('登录失败', error)
-      }
-    })
-  },
-  loadList (images, clb) {
-    var imagePromise = images.map((n, i) => {
-      return this.loadImageInfo(n)
-    })
-    Promise.all(imagePromise).then(clb)
-  },
-  loadImageInfo (image) {
-    return new Promise((resolve, reject) => {
-      wx.getImageInfo({
-        src: image.src,
-        success: (res) => {
-          if (res.width) {
-            let width = winWidth
-            image.width = width
-            image.height = res.height / res.width * width
-          }
-          resolve(image)
-        },
-        error: res => resolve(image)
+      var prs = []
+      res.forEach(n => {
+        if (!n.featured_media || this.data.articleImages[n.id]) return
+        prs.push(api('/wp/v2/media/' + n.featured_media))
       })
+
+      return Promise.all(prs)
+    }).then(res => {
+      var images = this.data.articleImages
+      res.forEach(n => {
+        images[n.post] = n.source_url
+      })
+      this.setData({
+        articleImages: images
+      })
+    }).catch(res => {
     })
   }
 })

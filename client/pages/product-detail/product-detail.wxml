@@ -1,15 +1,27 @@
 <view class="cover">
-  <image mode="aspectFill" src='https://modao.cc/uploads3/images/1826/18265626/raw_1522114198.jpeg'></image>
+  <image mode="aspectFill" src='{{product.images[0].src}}'></image>
 </view>
-<view class='info'>
-<view class='title'>2017年春 云香 临沧古树藤条茶 普洱茶生茶 357g/饼</view>
-<view class='price'>￥360 <text class='price-tag'>促销价</text></view>
-<view class='price-extra'>
-  <view class='price-extra-item'>原价： <text class='regular_price'>￥500</text></view>
-  <view class='price-extra-item adder'>北京仓</view>
+<view class='info' wx:if="{{product.type!='grouped'}}">
+  <view class='title'>{{product.name}}</view>
+  <view class='price'>￥{{product.price}} <text class='price-tag'>促销价</text></view>
+  <view class='price-extra'>
+    <view class='price-extra-item'>原价： <text class='regular_price'>￥{{product.regular_price}}</text></view>
+    <view class='price-extra-item adder'>北京仓</view>
+  </view>
 </view>
+
+<view class='products'>
+  <navigator class='product' wx:for="{{products}}" wx:key="index" url="/pages/product-detail/product-detail?id={{item.id}}">
+    <image mode="aspectFill" src='{{item.images[0].name}}' src='{{item.images[0].src}}'></image>
+    <view class='title'>{{item.name}}</view>
+    <view class='money'>
+      <text class='discount'>￥{{item.price}}</text>
+      <text class='price'>￥{{item.regular_price}}</text>
+    </view>
+  </navigator>
 </view>
 
 <view class='detail'>
-  
+  <import src="/wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 </view>

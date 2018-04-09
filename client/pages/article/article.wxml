@@ -1,15 +1,19 @@
 <view class="filter">
-  <input class='input' placeholder="搜索文章"/>
+  <input class='input' placeholder="搜索文章" bindinput='bindInput'/>
   <view class='filter-icon'>
     <view class='btn btn-search'>
-      <image src='/images/icon-search.png'></image>
+      <image src='/images/icon-search.png' bindtap='searchSubmit'></image>
     </view>
   </view>
 </view>
 
 <view class="container">
-  <view class='box' wx:for="{{news}}" wx:key="{{index}}">
-    <image mode="aspectFill" src="{{item.src}}" class="image"/>
-    <view class='title'>{{item.title}}</view>
-  </view>
+  <navigator class='box' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
+    <image mode="aspectFill" src="{{images[item.id]}}" class="image"/>
+    <view class='title'>{{item.title.rendered}}</view>
+  </navigator>
 </view>
+
+<view wx:if="{{isMore&&!loading}}" class='more' bindtap='loadMore'>加载更多</view>
+<view wx:if="{{!isMore&&!loading}}" class='more'>没有了</view>
+<view wx:if="{{loading}}" class='more'>正在加载...</view>

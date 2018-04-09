@@ -1,66 +1,44 @@
-// pages/product-detail/product-detail.js
+import { api } from '../../api'
+var WxParse = require('../../wxParse/wxParse.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    product: {},
+    products: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.id = options.id
+    this.fetch()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+  fetch() {
+    api('/wc/v2/products/' + this.id).then(res => {
+      this.setData({
+        product: res
+      })
+      WxParse.wxParse('content', 'html', res.description, this, 15);
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+      if (res.type === 'grouped') {
+        res.upsell_ids.map(n=>{
+          this.fetchSimple(n)
+        })
+      }
+    }).catch(res => {
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  fetchSimple(id){
+    return api('/wc/v2/products/' + id).then(res=>{
+      var products = this.data.products
+      products.push(res)
+      this.setData({ products})
+    })
   }
 })
