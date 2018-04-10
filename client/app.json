@@ -5,7 +5,8 @@
     "pages/product/product",
     "pages/product-detail/product-detail",
     "pages/article/article",
-    "pages/article-detail/article-detail"
+    "pages/article-detail/article-detail",
+    "pages/custom/custom"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,6 +33,12 @@
       {
         "pagePath": "pages/article/article",
         "text": "茶山茶事",
+        "iconPath": "images/icon-tea.png",
+        "selectedIconPath": "images/icon-tea-active.png"
+      },
+      {
+        "pagePath": "pages/custom/custom",
+        "text": "在线客服",
         "iconPath": "images/icon-tea.png",
         "selectedIconPath": "images/icon-tea-active.png"
       }

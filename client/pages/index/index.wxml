@@ -6,6 +6,7 @@
     </swiper-item>
   </block>
 </swiper>
+
 <view class="container">
   <navigator class='box' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
     <image mode="aspectFill" src="{{articleImages[item.featured_media]}}" class="image"/>

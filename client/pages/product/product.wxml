@@ -1,9 +1,9 @@
 <view class="filter-wrp">
   <view class="filter">
-    <input class='input' placeholder="搜索宝贝" value='{{search}}' bindinput="bindInput" confirm-type="search"/>
+    <input class='input' placeholder="搜索宝贝"  bindconfirm="handleConfirm" confirm-type="search"/>
     <view class='filter-icon'>
       <view class='btn btn-search' bindtap="searchSubmit">
-        <image src='/images/icon-search.png'></image>
+        <image src='/images/icon-search.png' mode="aspectFill"></image>
       </view>
       <view class='btn btn-money' bindtap='handleOrder'>
         价格
