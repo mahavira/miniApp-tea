@@ -1,29 +1,31 @@
 import { api } from '../../api'
-var swipers = [{
-  id: 0,
-  src: 'https://gdp.alicdn.com/imgextra/i1/2429209411/TB24qEJc3MPMeJjy1XbXXcwxVXa_!!2429209411.jpg',
-}, {
-  id: 0,
-  src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-}, {
-  id: 0,
-  src: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-}]
 
 Page({
   data: {
-    swipers: swipers,
+    swipers: [],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
     articles: [],
-    articleImages: {},
     products: []
   },
   onLoad() {
     this.fetchArticle()
     this.fetchProduct()
+    this.fetchSwiper()
+  },
+  fetchSwiper () {
+    api('/acf/v3/swiper').then(res => {
+      console.log(res)
+      var data = res.map(n => {
+        return n.acf
+      })
+      this.setData({
+        swipers: data
+      })
+    }).catch(res => {
+    })    
   },
   fetchProduct() {
     api('/wc/v2/products', {
@@ -44,23 +46,16 @@ Page({
       this.setData({
         articles: res
       })
-
-      var prs = []
-      res.forEach(n => {
-        if (!n.featured_media || this.data.articleImages[n.id]) return
-        prs.push(api('/wp/v2/media/' + n.featured_media))
-      })
-
-      return Promise.all(prs)
-    }).then(res => {
-      var images = this.data.articleImages
-      res.forEach(n => {
-        images[n.id] = n.source_url
-      })
-      this.setData({
-        articleImages: images
-      })
     }).catch(res => {
+    })
+  },
+  navigator (e) {
+    var data = e.target.dataset.target
+    var id = data.ID
+    var type = data.post_type == 'post' ? 'article' : 'product'
+    var url = `/pages/${type}-detail/${type}-detail?id=${id}`
+    wx.navigateTo({
+      url
     })
   }
 })

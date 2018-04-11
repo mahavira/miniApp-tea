@@ -2,7 +2,6 @@ import { api } from '../../api'
 Page({
   data: {
     articles: [],
-    images: {},
     isMore: true,
     loading: false,
     filterDefault: {
@@ -49,21 +48,6 @@ Page({
         articles,
         loading: false,
         isMore
-      })
-
-      var prs = []
-      res.forEach(n => {
-        if (!n.featured_media || this.data.images[n.featured_media]) return
-        prs.push(api('/wp/v2/media/' + n.featured_media))
-      })
-      return Promise.all(prs)
-    }).then(res=>{
-      var images = this.data.images
-      res.forEach(n=>{
-        images[n.id] = n.source_url
-      })
-      this.setData({
-        images
       })
     }).catch(res => {
       this.setData({

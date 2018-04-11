@@ -1,4 +1,4 @@
+<view class='custorm'>
 
-<button open-type="contact">进入客服会话</button>
-<contact-button class='cBtn' type="default-dark" size="20" >我要咨询</contact-button>
-<button class='contact-btn' send-message-path='/pages/index/index' show-message-card="true"  open-type="contact" session-from="weapp">yes</button>
+<button open-type="contact">点击进入客服会话</button>
+</view>
