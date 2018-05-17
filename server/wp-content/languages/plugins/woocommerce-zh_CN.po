@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-02-21 16:00:16+0000\n"
+"PO-Revision-Date: 2018-03-28 15:54:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,22 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: zh_CN\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+
+#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:265
+msgid "Profile &rarr;"
+msgstr "个人资料 &rarr;"
+
+#: includes/admin/class-wc-admin-setup-wizard.php:479
+msgid "Read more about what we collect."
+msgstr "详细了解我们收集哪些信息。"
+
+#: includes/admin/class-wc-admin-setup-wizard.php:478
+msgid "Checking this box means making WooCommerce better &mdash; your store will be considered as we evaluate new features, judge the quality of an update, or determine if an improvement makes sense. If you do not check this box, we will not know this store exists and we will not collect any usage data."
+msgstr "选中此复选框即表示，为了改进 WooCommerce，我们在评估新功能、判断更新的质量或决定改进是否有意义时，会将您的商店考虑在内。如果您没有选中此复选框，我们将不知道该商店的存在也不会收集任何使用数据。"
+
+#: includes/admin/class-wc-admin-setup-wizard.php:474
+msgid "Help WooCommerce improve by enabling usage tracking."
+msgstr "启用使用信息跟踪以帮助改进 WooCommerce。"
 
 #: includes/customizer/class-wc-shop-customizer.php:573
 msgid "Image size used for products in the catalog."
@@ -310,7 +326,7 @@ msgstr "%s 不是一个有效的邮编。"
 msgid "Error processing refund. Please try again."
 msgstr "退款处理发生错误。请重新尝试。"
 
-#: includes/api/class-wc-rest-products-controller.php:2067
+#: includes/api/class-wc-rest-products-controller.php:2068
 msgid "Limit result set to products with specific SKU(s). Use commas to separate."
 msgstr "用特定SKU来限定产品的结果集。如有多个，用英文半角逗号隔开。"
 
@@ -987,7 +1003,7 @@ msgid "Customer invoice / Order details"
 msgstr "顾客的收据/订单详情"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:677
-#: includes/api/class-wc-rest-products-controller.php:1550
+#: includes/api/class-wc-rest-products-controller.php:1551
 msgid "End date of sale price, as GMT."
 msgstr "促销价的截止日期，按 GMT 时间。"
 
@@ -3372,7 +3388,7 @@ msgstr "%1$d 更新完成，数据库版本为 %2$s"
 msgid "Calling update function: %s"
 msgstr "调用更新功能：%s"
 
-#: includes/cli/class-wc-cli-rest-command.php:321
+#: includes/cli/class-wc-cli-rest-command.php:325
 msgid "Make sure to include the --user flag with an account that has permissions for this action."
 msgstr "Make sure to include the --user flag with an account that has permissions for this action."
 
@@ -3396,7 +3412,7 @@ msgstr "限制为特定字段。默认为全部字段。"
 msgid "The id for the resource."
 msgstr "资源的id。"
 
-#: includes/cli/class-wc-cli-rest-command.php:245
+#: includes/cli/class-wc-cli-rest-command.php:249
 msgid "Updated"
 msgstr "已更新"
 
@@ -4066,23 +4082,23 @@ msgstr "无效的设置。"
 msgid "Invalid setting group."
 msgstr "无效的设置组。"
 
-#: includes/api/class-wc-rest-products-controller.php:2138
+#: includes/api/class-wc-rest-products-controller.php:2139
 msgid "Limit result set to products based on a maximum price."
 msgstr "限定结果为基于一个最大价格的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2132
+#: includes/api/class-wc-rest-products-controller.php:2133
 msgid "Limit result set to products based on a minimum price."
 msgstr "限定结果为基于一个最小价格的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2126
+#: includes/api/class-wc-rest-products-controller.php:2127
 msgid "Limit result set to products on sale."
 msgstr "限定结果为促销的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2120
+#: includes/api/class-wc-rest-products-controller.php:2121
 msgid "Limit result set to products in stock or out of stock."
 msgstr "限定结果为有货或售罄的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2111
+#: includes/api/class-wc-rest-products-controller.php:2112
 msgid "Limit result set to products with a specific tax class."
 msgstr "限定结果为有特定税类型的产品。"
 
@@ -4090,19 +4106,19 @@ msgstr "限定结果为有特定税类型的产品。"
 msgid "A unique identifier that can be used to link settings together."
 msgstr "用于将设置连接到一起的一个唯一的标识符。"
 
-#: includes/api/class-wc-rest-products-controller.php:1985
+#: includes/api/class-wc-rest-products-controller.php:1986
 msgid "List of variations IDs."
 msgstr "变量ID列表。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:744
-#: includes/api/class-wc-rest-products-controller.php:1623
+#: includes/api/class-wc-rest-products-controller.php:1624
 #: includes/api/v1/class-wc-rest-products-controller.php:1905
 #: includes/api/v1/class-wc-rest-products-controller.php:2383
 msgid "Number of days until access to downloadable files expires."
 msgstr "文件在多少天后过期。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:738
-#: includes/api/class-wc-rest-products-controller.php:1617
+#: includes/api/class-wc-rest-products-controller.php:1618
 #: includes/api/v1/class-wc-rest-products-controller.php:1899
 #: includes/api/v1/class-wc-rest-products-controller.php:2377
 msgid "Number of times downloadable files can be downloaded after purchase."
@@ -4142,15 +4158,15 @@ msgstr "界面上可见的，关于该设置的容易被人理解的描述。"
 msgid "The date the order was paid, as GMT."
 msgstr "订单支付日期，时区是GMT。"
 
-#: includes/api/class-wc-rest-products-controller.php:2073
+#: includes/api/class-wc-rest-products-controller.php:2074
 msgid "Limit result set to featured products."
 msgstr "限定结果为特色产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:1471
+#: includes/api/class-wc-rest-products-controller.php:1472
 msgid "The date the product was last modified, as GMT."
 msgstr "产品最近被修改的日期，时区为GMT。"
 
-#: includes/api/class-wc-rest-products-controller.php:1459
+#: includes/api/class-wc-rest-products-controller.php:1460
 msgid "The date the product was created, as GMT."
 msgstr "产品被创建的日期，时区为GMT。"
 
@@ -4161,13 +4177,13 @@ msgstr "评价的内容。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:177
 #: includes/api/class-wc-rest-product-variations-controller.php:868
-#: includes/api/class-wc-rest-products-controller.php:1885
+#: includes/api/class-wc-rest-products-controller.php:1886
 msgid "The date the image was last modified, as GMT."
 msgstr "图片最近被修改的日期，时区为GMT。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:165
 #: includes/api/class-wc-rest-product-variations-controller.php:856
-#: includes/api/class-wc-rest-products-controller.php:1873
+#: includes/api/class-wc-rest-products-controller.php:1874
 msgid "The date the image was created, as GMT."
 msgstr "图片被创建的日期，时区为GMT。"
 
@@ -4220,17 +4236,17 @@ msgid "Payment gateway title on checkout."
 msgstr "支付时，支付网关的标题。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:672
-#: includes/api/class-wc-rest-products-controller.php:1545
+#: includes/api/class-wc-rest-products-controller.php:1546
 msgid "End date of sale price, in the site's timezone."
 msgstr "促销价结束日期，时区为站点所选时区。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:662
-#: includes/api/class-wc-rest-products-controller.php:1535
+#: includes/api/class-wc-rest-products-controller.php:1536
 msgid "Start date of sale price, in the site's timezone."
 msgstr "促销价开始日期，时区为站点所选时区。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:667
-#: includes/api/class-wc-rest-products-controller.php:1540
+#: includes/api/class-wc-rest-products-controller.php:1541
 msgid "Start date of sale price, as GMT."
 msgstr "促销价开始日期，时区为GMT。"
 
@@ -4257,7 +4273,7 @@ msgstr "该设置的唯一标识符。"
 #: includes/api/class-wc-rest-orders-controller.php:1500
 #: includes/api/class-wc-rest-orders-controller.php:1558
 #: includes/api/class-wc-rest-product-variations-controller.php:927
-#: includes/api/class-wc-rest-products-controller.php:2007
+#: includes/api/class-wc-rest-products-controller.php:2008
 msgid "Meta data."
 msgstr "元数据。"
 
@@ -4331,7 +4347,7 @@ msgstr "该顾客是否为支付顾客？"
 #: includes/api/class-wc-rest-orders-controller.php:1507
 #: includes/api/class-wc-rest-orders-controller.php:1565
 #: includes/api/class-wc-rest-product-variations-controller.php:934
-#: includes/api/class-wc-rest-products-controller.php:2014
+#: includes/api/class-wc-rest-products-controller.php:2015
 msgid "Meta ID."
 msgstr "元数据ID。"
 
@@ -5176,8 +5192,8 @@ msgstr "L'Aquila"
 
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:147
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:254
-#: includes/api/class-wc-rest-products-controller.php:701
-#: includes/api/class-wc-rest-products-controller.php:1316
+#: includes/api/class-wc-rest-products-controller.php:702
+#: includes/api/class-wc-rest-products-controller.php:1317
 #: includes/api/v1/class-wc-rest-products-controller.php:1637
 msgid "To manipulate product variations you should use the /products/&lt;product_id&gt;/variations/&lt;id&gt; endpoint."
 msgstr "您应使用端点/products/&lt;product_id&gt;/variations/&lt;id&gt; 操作产品变量。"
@@ -5404,7 +5420,7 @@ msgid "ID to reassign posts to."
 msgstr "重新指定文章的ID。"
 
 #. translators: %s: attachment id
-#: includes/api/class-wc-rest-products-controller.php:1089
+#: includes/api/class-wc-rest-products-controller.php:1090
 #: includes/api/v1/class-wc-rest-products-controller.php:867
 msgid "#%s is an invalid image ID."
 msgstr "#%s 是无效的图片ID。"
@@ -6284,7 +6300,7 @@ msgid "Coupons list"
 msgstr "优惠券列表"
 
 #. translators: %s: page
-#: includes/class-wc-query.php:111
+#: includes/class-wc-query.php:110
 msgid "Orders (page %d)"
 msgstr "订单 （第 %d 页）"
 
@@ -6600,7 +6616,7 @@ msgid "Cannot create line item, try again."
 msgstr "无法创建行间物品，请重试。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:113
-#: includes/api/class-wc-rest-products-controller.php:1813
+#: includes/api/class-wc-rest-products-controller.php:1814
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:180
 #: includes/api/v1/class-wc-rest-products-controller.php:2102
 msgid "Category name."
@@ -6638,7 +6654,7 @@ msgstr "税金总计。"
 #: includes/api/class-wc-rest-orders-controller.php:1513
 #: includes/api/class-wc-rest-orders-controller.php:1571
 #: includes/api/class-wc-rest-product-variations-controller.php:940
-#: includes/api/class-wc-rest-products-controller.php:2020
+#: includes/api/class-wc-rest-products-controller.php:2021
 #: includes/api/v1/class-wc-rest-order-refunds-controller.php:483
 #: includes/api/v1/class-wc-rest-orders-controller.php:1314
 msgid "Meta key."
@@ -6660,7 +6676,7 @@ msgstr "元数据的显示标签。"
 #: includes/api/class-wc-rest-orders-controller.php:1518
 #: includes/api/class-wc-rest-orders-controller.php:1576
 #: includes/api/class-wc-rest-product-variations-controller.php:945
-#: includes/api/class-wc-rest-products-controller.php:2025
+#: includes/api/class-wc-rest-products-controller.php:2026
 #: includes/api/v1/class-wc-rest-order-refunds-controller.php:495
 #: includes/api/v1/class-wc-rest-orders-controller.php:1326
 msgid "Meta value."
@@ -6913,7 +6929,7 @@ msgstr "图片数据"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:154
 #: includes/api/class-wc-rest-product-variations-controller.php:845
-#: includes/api/class-wc-rest-products-controller.php:1862
+#: includes/api/class-wc-rest-products-controller.php:1863
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:221
 #: includes/api/v1/class-wc-rest-products-controller.php:2151
 #: includes/api/v1/class-wc-rest-products-controller.php:2484
@@ -6922,7 +6938,7 @@ msgstr "图片 ID。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:189
 #: includes/api/class-wc-rest-product-variations-controller.php:880
-#: includes/api/class-wc-rest-products-controller.php:1897
+#: includes/api/class-wc-rest-products-controller.php:1898
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:244
 #: includes/api/v1/class-wc-rest-products-controller.php:2174
 #: includes/api/v1/class-wc-rest-products-controller.php:2507
@@ -6934,54 +6950,54 @@ msgstr "图片名称。"
 msgid "The SKU already exists on another product."
 msgstr "SKU 已经存在于其它产品中。"
 
-#: includes/api/class-wc-rest-products-controller.php:1491
+#: includes/api/class-wc-rest-products-controller.php:1492
 #: includes/api/v1/class-wc-rest-products-controller.php:1783
 msgid "Featured product."
 msgstr "特色产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:1509
+#: includes/api/class-wc-rest-products-controller.php:1510
 #: includes/api/v1/class-wc-rest-products-controller.php:1801
 msgid "Product short description."
 msgstr "产品简短描述。"
 
 #. translators: %s: dimension unit
-#: includes/api/class-wc-rest-products-controller.php:1706
+#: includes/api/class-wc-rest-products-controller.php:1707
 #: includes/api/v1/class-wc-rest-products-controller.php:1995
 msgid "Product length (%s)."
 msgstr "产品长度 (%s)。"
 
 #. translators: %s: dimension unit
-#: includes/api/class-wc-rest-products-controller.php:1712
+#: includes/api/class-wc-rest-products-controller.php:1713
 #: includes/api/v1/class-wc-rest-products-controller.php:2001
 msgid "Product width (%s)."
 msgstr "产品宽度 (%s)。"
 
 #. translators: %s: dimension unit
-#: includes/api/class-wc-rest-products-controller.php:1718
+#: includes/api/class-wc-rest-products-controller.php:1719
 #: includes/api/v1/class-wc-rest-products-controller.php:2007
 msgid "Product height (%s)."
 msgstr "产品高度 (%s)。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:183
 #: includes/api/class-wc-rest-product-variations-controller.php:874
-#: includes/api/class-wc-rest-products-controller.php:1891
+#: includes/api/class-wc-rest-products-controller.php:1892
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:238
 #: includes/api/v1/class-wc-rest-products-controller.php:2168
 #: includes/api/v1/class-wc-rest-products-controller.php:2501
 msgid "Image URL."
 msgstr "图片链接。"
 
-#: includes/api/class-wc-rest-products-controller.php:1446
+#: includes/api/class-wc-rest-products-controller.php:1447
 #: includes/api/v1/class-wc-rest-products-controller.php:1750
 msgid "Product URL."
 msgstr "产品的链接。"
 
-#: includes/api/class-wc-rest-products-controller.php:1477
+#: includes/api/class-wc-rest-products-controller.php:1478
 #: includes/api/v1/class-wc-rest-products-controller.php:1769
 msgid "Product type."
 msgstr "产品的类型。"
 
-#: includes/api/class-wc-rest-products-controller.php:1504
+#: includes/api/class-wc-rest-products-controller.php:1505
 #: includes/api/v1/class-wc-rest-products-controller.php:1796
 msgid "Product description."
 msgstr "产品的描述。"
@@ -7057,8 +7073,8 @@ msgid "Tax total (not including shipping taxes)."
 msgstr "总税额(不含运费税)。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:909
-#: includes/api/class-wc-rest-products-controller.php:1927
-#: includes/api/class-wc-rest-products-controller.php:1972
+#: includes/api/class-wc-rest-products-controller.php:1928
+#: includes/api/class-wc-rest-products-controller.php:1973
 #: includes/api/v1/class-wc-rest-product-attributes-controller.php:462
 #: includes/api/v1/class-wc-rest-products-controller.php:2204
 #: includes/api/v1/class-wc-rest-products-controller.php:2246
@@ -7085,7 +7101,7 @@ msgstr "分类归档显示类型。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:159
 #: includes/api/class-wc-rest-product-variations-controller.php:850
-#: includes/api/class-wc-rest-products-controller.php:1867
+#: includes/api/class-wc-rest-products-controller.php:1868
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:226
 #: includes/api/v1/class-wc-rest-products-controller.php:2156
 #: includes/api/v1/class-wc-rest-products-controller.php:2489
@@ -7094,7 +7110,7 @@ msgstr "该图片的创建日期，以网站时区表示。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:171
 #: includes/api/class-wc-rest-product-variations-controller.php:862
-#: includes/api/class-wc-rest-products-controller.php:1879
+#: includes/api/class-wc-rest-products-controller.php:1880
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:232
 #: includes/api/v1/class-wc-rest-products-controller.php:2162
 #: includes/api/v1/class-wc-rest-products-controller.php:2495
@@ -7103,7 +7119,7 @@ msgstr "该图片的最后修改日期，以网站时区表示。"
 
 #: includes/api/class-wc-rest-product-categories-controller.php:194
 #: includes/api/class-wc-rest-product-variations-controller.php:885
-#: includes/api/class-wc-rest-products-controller.php:1902
+#: includes/api/class-wc-rest-products-controller.php:1903
 #: includes/api/v1/class-wc-rest-product-categories-controller.php:249
 #: includes/api/v1/class-wc-rest-products-controller.php:2179
 #: includes/api/v1/class-wc-rest-products-controller.php:2512
@@ -7119,37 +7135,37 @@ msgstr "该评价的创建日期，以网站时区表示。"
 msgid "Shipping class name."
 msgstr "配送类型的名称。"
 
-#: includes/api/class-wc-rest-products-controller.php:1579
+#: includes/api/class-wc-rest-products-controller.php:1580
 #: includes/api/v1/class-wc-rest-products-controller.php:1861
 msgid "If the product is virtual."
 msgstr "如果该产品是虚拟产品的话。"
 
-#: includes/api/class-wc-rest-products-controller.php:1585
+#: includes/api/class-wc-rest-products-controller.php:1586
 #: includes/api/v1/class-wc-rest-products-controller.php:1867
 msgid "If the product is downloadable."
 msgstr "如果该产品是可下载产品的话。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:712
-#: includes/api/class-wc-rest-products-controller.php:1591
+#: includes/api/class-wc-rest-products-controller.php:1592
 #: includes/api/v1/class-wc-rest-products-controller.php:1873
 #: includes/api/v1/class-wc-rest-products-controller.php:2351
 msgid "List of downloadable files."
 msgstr "可下载文件列表。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:719
-#: includes/api/class-wc-rest-products-controller.php:1598
+#: includes/api/class-wc-rest-products-controller.php:1599
 #: includes/api/v1/class-wc-rest-products-controller.php:1880
 #: includes/api/v1/class-wc-rest-products-controller.php:2358
 msgid "File MD5 hash."
 msgstr "文件的MD5值。"
 
-#: includes/api/class-wc-rest-products-controller.php:1573
+#: includes/api/class-wc-rest-products-controller.php:1574
 #: includes/api/v1/class-wc-rest-products-controller.php:1855
 msgid "Amount of sales."
 msgstr "售出数量。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:750
-#: includes/api/class-wc-rest-products-controller.php:1640
+#: includes/api/class-wc-rest-products-controller.php:1641
 #: includes/api/v1/class-wc-rest-products-controller.php:1929
 #: includes/api/v1/class-wc-rest-products-controller.php:2389
 msgid "Tax status."
@@ -7159,99 +7175,99 @@ msgstr "税的状态。"
 msgid "Download type, this controls the schema on the front-end."
 msgstr "下载的类型，将用于前端的显示。"
 
-#: includes/api/class-wc-rest-products-controller.php:1629
+#: includes/api/class-wc-rest-products-controller.php:1630
 #: includes/api/v1/class-wc-rest-products-controller.php:1918
 msgid "Product external URL. Only for external products."
 msgstr "产品的外部链接，仅用于外链产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:1635
+#: includes/api/class-wc-rest-products-controller.php:1636
 #: includes/api/v1/class-wc-rest-products-controller.php:1924
 msgid "Product external button text. Only for external products."
 msgstr "外链产品的按钮文本，仅用于外链产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:1652
+#: includes/api/class-wc-rest-products-controller.php:1653
 #: includes/api/v1/class-wc-rest-products-controller.php:1941
 msgid "Stock management at product level."
 msgstr "产品级的库存管理。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:768
-#: includes/api/class-wc-rest-products-controller.php:1658
+#: includes/api/class-wc-rest-products-controller.php:1659
 #: includes/api/v1/class-wc-rest-products-controller.php:1947
 #: includes/api/v1/class-wc-rest-products-controller.php:2407
 msgid "Stock quantity."
 msgstr "库存数量。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:779
-#: includes/api/class-wc-rest-products-controller.php:1669
+#: includes/api/class-wc-rest-products-controller.php:1670
 #: includes/api/v1/class-wc-rest-products-controller.php:1958
 #: includes/api/v1/class-wc-rest-products-controller.php:2418
 msgid "If managing stock, this controls if backorders are allowed."
 msgstr "如开启库存管理，这将控制是否允许延期交货。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:786
-#: includes/api/class-wc-rest-products-controller.php:1676
+#: includes/api/class-wc-rest-products-controller.php:1677
 #: includes/api/v1/class-wc-rest-products-controller.php:1965
 #: includes/api/v1/class-wc-rest-products-controller.php:2425
 msgid "Shows if backorders are allowed."
 msgstr "如果允许延期交货将会显示。"
 
-#: includes/api/class-wc-rest-products-controller.php:1801
+#: includes/api/class-wc-rest-products-controller.php:1802
 #: includes/api/v1/class-wc-rest-products-controller.php:2090
 msgid "List of categories."
 msgstr "分类列表。"
 
-#: includes/api/class-wc-rest-products-controller.php:1796
+#: includes/api/class-wc-rest-products-controller.php:1797
 #: includes/api/v1/class-wc-rest-products-controller.php:2085
 msgid "Optional note to send the customer after purchase."
 msgstr "可选的备注，顾客在购买后将会收到。"
 
-#: includes/api/class-wc-rest-products-controller.php:1819
+#: includes/api/class-wc-rest-products-controller.php:1820
 #: includes/api/v1/class-wc-rest-products-controller.php:2108
 msgid "Category slug."
 msgstr "分类的别名。"
 
-#: includes/api/class-wc-rest-products-controller.php:1828
+#: includes/api/class-wc-rest-products-controller.php:1829
 #: includes/api/v1/class-wc-rest-products-controller.php:2117
 msgid "List of tags."
 msgstr "标签列表。"
 
-#: includes/api/class-wc-rest-products-controller.php:1808
+#: includes/api/class-wc-rest-products-controller.php:1809
 #: includes/api/v1/class-wc-rest-products-controller.php:2097
 msgid "Category ID."
 msgstr "分类的ID。"
 
-#: includes/api/class-wc-rest-products-controller.php:1835
+#: includes/api/class-wc-rest-products-controller.php:1836
 #: includes/api/v1/class-wc-rest-products-controller.php:2124
 msgid "Tag ID."
 msgstr "标签的ID。"
 
-#: includes/api/class-wc-rest-products-controller.php:1846
+#: includes/api/class-wc-rest-products-controller.php:1847
 #: includes/api/v1/class-wc-rest-products-controller.php:2135
 msgid "Tag slug."
 msgstr "标签的别名。"
 
-#: includes/api/class-wc-rest-products-controller.php:1855
+#: includes/api/class-wc-rest-products-controller.php:1856
 #: includes/api/v1/class-wc-rest-products-controller.php:2144
 msgid "List of images."
 msgstr "图片列表。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:890
-#: includes/api/class-wc-rest-products-controller.php:1907
+#: includes/api/class-wc-rest-products-controller.php:1908
 #: includes/api/v1/class-wc-rest-products-controller.php:2184
 #: includes/api/v1/class-wc-rest-products-controller.php:2517
 msgid "Image position. 0 means that the image is featured."
 msgstr "图片的位置。0表示该图片为特色图像。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:897
-#: includes/api/class-wc-rest-products-controller.php:1915
+#: includes/api/class-wc-rest-products-controller.php:1916
 #: includes/api/v1/class-wc-rest-products-controller.php:2192
 #: includes/api/v1/class-wc-rest-products-controller.php:2524
 msgid "List of attributes."
 msgstr "属性列表。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:904
-#: includes/api/class-wc-rest-products-controller.php:1922
-#: includes/api/class-wc-rest-products-controller.php:1967
+#: includes/api/class-wc-rest-products-controller.php:1923
+#: includes/api/class-wc-rest-products-controller.php:1968
 #: includes/api/v1/class-wc-rest-products-controller.php:2199
 #: includes/api/v1/class-wc-rest-products-controller.php:2241
 #: includes/api/v1/class-wc-rest-products-controller.php:2531
@@ -7259,17 +7275,17 @@ msgstr "属性列表。"
 msgid "Attribute ID."
 msgstr "属性的ID。"
 
-#: includes/api/class-wc-rest-products-controller.php:1932
+#: includes/api/class-wc-rest-products-controller.php:1933
 #: includes/api/v1/class-wc-rest-products-controller.php:2209
 msgid "Attribute position."
 msgstr "属性的位置。"
 
-#: includes/api/class-wc-rest-products-controller.php:1943
+#: includes/api/class-wc-rest-products-controller.php:1944
 #: includes/api/v1/class-wc-rest-products-controller.php:2220
 msgid "Define if the attribute can be used as variation."
 msgstr "定义此属性是否可用于变量。"
 
-#: includes/api/class-wc-rest-products-controller.php:1949
+#: includes/api/class-wc-rest-products-controller.php:1950
 #: includes/api/v1/class-wc-rest-products-controller.php:2226
 msgid "List of available term names of the attribute."
 msgstr "此属性的可用term名称列表。"
@@ -7294,13 +7310,13 @@ msgstr "控制此变量产品是否在前台显示\"现货\" 或 \"售罄\" 。"
 msgid "Shows if the variation is on backordered."
 msgstr "如果允许延期交货就显示。"
 
-#: includes/api/class-wc-rest-products-controller.php:1994
+#: includes/api/class-wc-rest-products-controller.php:1995
 #: includes/api/v1/class-wc-rest-products-controller.php:2552
 msgid "List of grouped products ID."
 msgstr "成组产品的ID列表。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:922
-#: includes/api/class-wc-rest-products-controller.php:2002
+#: includes/api/class-wc-rest-products-controller.php:2003
 #: includes/api/v1/class-wc-rest-products-controller.php:2561
 msgid "Menu order, used to custom sort products."
 msgstr "目录顺序,用于自定的产品排序。"
@@ -7345,39 +7361,39 @@ msgstr "该资源的HTML描述。"
 msgid "Number of published products for the resource."
 msgstr "该资源的已发布产品数量。"
 
-#: includes/api/class-wc-rest-products-controller.php:1497
+#: includes/api/class-wc-rest-products-controller.php:1498
 #: includes/api/v1/class-wc-rest-products-controller.php:1789
 msgid "Catalog visibility."
 msgstr "目录可见性。"
 
-#: includes/api/class-wc-rest-products-controller.php:1453
+#: includes/api/class-wc-rest-products-controller.php:1454
 #: includes/api/v1/class-wc-rest-products-controller.php:1757
 msgid "The date the product was created, in the site's timezone."
 msgstr "以网站所在时区显示的产品发布日期。"
 
-#: includes/api/class-wc-rest-products-controller.php:1465
+#: includes/api/class-wc-rest-products-controller.php:1466
 #: includes/api/v1/class-wc-rest-products-controller.php:1763
 msgid "The date the product was last modified, in the site's timezone."
 msgstr "以网站所在时区显示的产品最后修改日期。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:641
-#: includes/api/class-wc-rest-products-controller.php:1514
+#: includes/api/class-wc-rest-products-controller.php:1515
 #: includes/api/v1/class-wc-rest-products-controller.php:1806
 #: includes/api/v1/class-wc-rest-products-controller.php:2291
 msgid "Unique identifier."
 msgstr "统一标识符"
 
-#: includes/api/class-wc-rest-products-controller.php:1519
+#: includes/api/class-wc-rest-products-controller.php:1520
 #: includes/api/v1/class-wc-rest-products-controller.php:1811
 msgid "Current product price."
 msgstr "当前产品的价格。"
 
-#: includes/api/class-wc-rest-products-controller.php:1525
+#: includes/api/class-wc-rest-products-controller.php:1526
 #: includes/api/v1/class-wc-rest-products-controller.php:1817
 msgid "Product regular price."
 msgstr "产品的常规价格。"
 
-#: includes/api/class-wc-rest-products-controller.php:1530
+#: includes/api/class-wc-rest-products-controller.php:1531
 #: includes/api/v1/class-wc-rest-products-controller.php:1822
 msgid "Product sale price."
 msgstr "产品的促销价格。"
@@ -7387,27 +7403,27 @@ msgstr "产品的促销价格。"
 msgid "Start date of sale price."
 msgstr "促销价格的开始日期。"
 
-#: includes/api/class-wc-rest-products-controller.php:1555
+#: includes/api/class-wc-rest-products-controller.php:1556
 #: includes/api/v1/class-wc-rest-products-controller.php:1837
 msgid "Price formatted in HTML."
 msgstr "HTML格式的价格。"
 
-#: includes/api/class-wc-rest-products-controller.php:1561
+#: includes/api/class-wc-rest-products-controller.php:1562
 #: includes/api/v1/class-wc-rest-products-controller.php:1843
 msgid "Shows if the product is on sale."
 msgstr "显示该产品是否正在促销。"
 
-#: includes/api/class-wc-rest-products-controller.php:1567
+#: includes/api/class-wc-rest-products-controller.php:1568
 #: includes/api/v1/class-wc-rest-products-controller.php:1849
 msgid "Shows if the product can be bought."
 msgstr "显示该产品是否可被购买。"
 
-#: includes/api/class-wc-rest-products-controller.php:1682
+#: includes/api/class-wc-rest-products-controller.php:1683
 #: includes/api/v1/class-wc-rest-products-controller.php:1971
 msgid "Shows if the product is on backordered."
 msgstr "显示该产品是否可在缺货状态下被购买。"
 
-#: includes/api/class-wc-rest-products-controller.php:1688
+#: includes/api/class-wc-rest-products-controller.php:1689
 #: includes/api/v1/class-wc-rest-products-controller.php:1977
 msgid "Allow one item to be bought in a single order."
 msgstr "每个订单仅允许购买一件。"
@@ -7470,12 +7486,12 @@ msgstr "如果该变量为虚拟产品。"
 msgid "If the variation is downloadable."
 msgstr "如果该变量为可下载产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2053
+#: includes/api/class-wc-rest-products-controller.php:2054
 #: includes/api/v1/class-wc-rest-products-controller.php:2586
 msgid "Limit result set to products assigned a specific status."
 msgstr "将结果设置为特定别状态的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2047
+#: includes/api/class-wc-rest-products-controller.php:2048
 #: includes/api/v1/class-wc-rest-products-controller.php:2580
 msgid "Limit result set to products with a specific slug."
 msgstr "将结果设置为特定别名(slug)的产品。"
@@ -7489,94 +7505,94 @@ msgstr "被购买总数。"
 msgid "Grand total."
 msgstr "总计。"
 
-#: includes/api/class-wc-rest-products-controller.php:1840
+#: includes/api/class-wc-rest-products-controller.php:1841
 #: includes/api/v1/class-wc-rest-product-tags-controller.php:100
 #: includes/api/v1/class-wc-rest-products-controller.php:2129
 msgid "Tag name."
 msgstr "标签(Tag)的名称。"
 
-#: includes/api/class-wc-rest-products-controller.php:1441
+#: includes/api/class-wc-rest-products-controller.php:1442
 #: includes/api/v1/class-wc-rest-products-controller.php:1745
 msgid "Product slug."
 msgstr "产品的别名。"
 
-#: includes/api/class-wc-rest-products-controller.php:1748
+#: includes/api/class-wc-rest-products-controller.php:1749
 #: includes/api/v1/class-wc-rest-products-controller.php:2037
 msgid "Allow reviews."
 msgstr "允许评价。"
 
-#: includes/api/class-wc-rest-products-controller.php:1754
+#: includes/api/class-wc-rest-products-controller.php:1755
 #: includes/api/v1/class-wc-rest-products-controller.php:2043
 msgid "Reviews average rating."
 msgstr "评价的平均得分。"
 
-#: includes/api/class-wc-rest-products-controller.php:1760
+#: includes/api/class-wc-rest-products-controller.php:1761
 #: includes/api/v1/class-wc-rest-products-controller.php:2049
 msgid "Amount of reviews that the product have."
 msgstr "该产品有多少个评价。"
 
-#: includes/api/class-wc-rest-products-controller.php:1766
+#: includes/api/class-wc-rest-products-controller.php:1767
 #: includes/api/v1/class-wc-rest-products-controller.php:2055
 msgid "List of related products IDs."
 msgstr "相关产品的ID列表。"
 
-#: includes/api/class-wc-rest-products-controller.php:1775
+#: includes/api/class-wc-rest-products-controller.php:1776
 msgid "List of up-sell products IDs."
 msgstr "up-sell 产品的ID列表。"
 
-#: includes/api/class-wc-rest-products-controller.php:1783
+#: includes/api/class-wc-rest-products-controller.php:1784
 #: includes/api/v1/class-wc-rest-products-controller.php:2072
 msgid "List of cross-sell products IDs."
 msgstr "cross-sell 产品的ID列表。"
 
-#: includes/api/class-wc-rest-products-controller.php:1791
+#: includes/api/class-wc-rest-products-controller.php:1792
 #: includes/api/v1/class-wc-rest-products-controller.php:2080
 msgid "Product parent ID."
 msgstr "产品的父级ID。"
 
-#: includes/api/class-wc-rest-products-controller.php:1960
+#: includes/api/class-wc-rest-products-controller.php:1961
 #: includes/api/v1/class-wc-rest-products-controller.php:2234
 msgid "Defaults variation attributes."
 msgstr "默认的变量属性。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:914
-#: includes/api/class-wc-rest-products-controller.php:1977
+#: includes/api/class-wc-rest-products-controller.php:1978
 #: includes/api/v1/class-wc-rest-products-controller.php:2251
 #: includes/api/v1/class-wc-rest-products-controller.php:2541
 msgid "Selected attribute term name."
 msgstr "已选定的属性term名称。"
 
-#: includes/api/class-wc-rest-products-controller.php:1700
+#: includes/api/class-wc-rest-products-controller.php:1701
 #: includes/api/v1/class-wc-rest-products-controller.php:1989
 msgid "Product dimensions."
 msgstr "产品的体积。"
 
 #. translators: %s: weight unit
-#: includes/api/class-wc-rest-products-controller.php:1695
+#: includes/api/class-wc-rest-products-controller.php:1696
 #: includes/api/v1/class-wc-rest-products-controller.php:1984
 msgid "Product weight (%s)."
 msgstr "产品的重量(%s)。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:834
-#: includes/api/class-wc-rest-products-controller.php:1742
+#: includes/api/class-wc-rest-products-controller.php:1743
 #: includes/api/v1/class-wc-rest-products-controller.php:2031
 #: includes/api/v1/class-wc-rest-products-controller.php:2473
 msgid "Shipping class ID."
 msgstr "配送类型的ID。"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:829
-#: includes/api/class-wc-rest-products-controller.php:1737
+#: includes/api/class-wc-rest-products-controller.php:1738
 #: includes/api/v1/class-wc-rest-products-controller.php:2026
 #: includes/api/v1/class-wc-rest-products-controller.php:2468
 msgid "Shipping class slug."
 msgstr "配送类型的别名。"
 
-#: includes/api/class-wc-rest-products-controller.php:1725
+#: includes/api/class-wc-rest-products-controller.php:1726
 #: includes/api/v1/class-wc-rest-products-controller.php:2014
 msgid "Shows if the product need to be shipped."
 msgstr "显示该产品是否需要配送。"
 
-#: includes/api/class-wc-rest-products-controller.php:1731
+#: includes/api/class-wc-rest-products-controller.php:1732
 #: includes/api/v1/class-wc-rest-products-controller.php:2020
 msgid "Shows whether or not the product shipping is taxable."
 msgstr "显示该产品的运费是否应课税。"
@@ -7648,7 +7664,7 @@ msgstr "限制结果为与某一个顾客相关的订单。"
 msgid "Term name."
 msgstr "类别的名称。"
 
-#: includes/api/class-wc-rest-products-controller.php:2060
+#: includes/api/class-wc-rest-products-controller.php:2061
 #: includes/api/v1/class-wc-rest-products-controller.php:2593
 msgid "Limit result set to products assigned a specific type."
 msgstr "限制结果为与一个特定的产品类型相关的产品。"
@@ -7657,7 +7673,7 @@ msgstr "限制结果为与一个特定的产品类型相关的产品。"
 msgid "Limit result set to products with a specific SKU."
 msgstr "限制结果为与一个特定的SKU相关的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2097
+#: includes/api/class-wc-rest-products-controller.php:2098
 #: includes/api/v1/class-wc-rest-products-controller.php:2618
 msgid "Limit result set to products with a specific attribute."
 msgstr "限制结果为与一个特定的属性相关的产品。"
@@ -7677,27 +7693,27 @@ msgstr "为一个特定的截止日期返回销售额，日期格式需为 %s �
 msgid "Line item meta data."
 msgstr "订单物品的元数据."
 
-#: includes/api/class-wc-rest-products-controller.php:2103
+#: includes/api/class-wc-rest-products-controller.php:2104
 #: includes/api/v1/class-wc-rest-products-controller.php:2624
 msgid "Limit result set to products with a specific attribute term ID (required an assigned attribute)."
 msgstr "限制结果为与一个特定的属性类别(需要指定一个属性)相关的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2091
+#: includes/api/class-wc-rest-products-controller.php:2092
 #: includes/api/v1/class-wc-rest-products-controller.php:2612
 msgid "Limit result set to products assigned a specific shipping class ID."
 msgstr "限制结果为与一个特定的配送类型相关的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2085
+#: includes/api/class-wc-rest-products-controller.php:2086
 #: includes/api/v1/class-wc-rest-products-controller.php:2606
 msgid "Limit result set to products assigned a specific tag ID."
 msgstr "限制结果为与一个特定的标签相关的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:2079
+#: includes/api/class-wc-rest-products-controller.php:2080
 #: includes/api/v1/class-wc-rest-products-controller.php:2600
 msgid "Limit result set to products assigned a specific category ID."
 msgstr "限制结果为与一个特定的分类相关的产品。"
 
-#: includes/api/class-wc-rest-products-controller.php:1937
+#: includes/api/class-wc-rest-products-controller.php:1938
 #: includes/api/v1/class-wc-rest-products-controller.php:2214
 msgid "Define if the attribute is visible on the \"Additional information\" tab in the product's page."
 msgstr "定义是否在产品详情页的 \"附加信息\"选项卡显示此属性。 "
@@ -7746,7 +7762,7 @@ msgstr "此顾客的用户代理。"
 msgid "End date of sale price."
 msgstr "促销价格的截止日期。"
 
-#: includes/api/class-wc-rest-products-controller.php:1484
+#: includes/api/class-wc-rest-products-controller.php:1485
 #: includes/api/v1/class-wc-rest-products-controller.php:1776
 msgid "Product status (post status)."
 msgstr "产品状态（文章状态）"
@@ -7835,7 +7851,7 @@ msgstr "顾客不支持回收站。"
 
 #: includes/api/class-wc-rest-customer-downloads-controller.php:151
 #: includes/api/class-wc-rest-product-variations-controller.php:725
-#: includes/api/class-wc-rest-products-controller.php:1604
+#: includes/api/class-wc-rest-products-controller.php:1605
 #: includes/api/v1/class-wc-rest-customer-downloads-controller.php:223
 #: includes/api/v1/class-wc-rest-products-controller.php:1886
 #: includes/api/v1/class-wc-rest-products-controller.php:2364
@@ -7844,7 +7860,7 @@ msgstr "文件的名称。"
 
 #: includes/api/class-wc-rest-customer-downloads-controller.php:157
 #: includes/api/class-wc-rest-product-variations-controller.php:730
-#: includes/api/class-wc-rest-products-controller.php:1609
+#: includes/api/class-wc-rest-products-controller.php:1610
 #: includes/api/v1/class-wc-rest-customer-downloads-controller.php:229
 #: includes/api/v1/class-wc-rest-products-controller.php:1891
 #: includes/api/v1/class-wc-rest-products-controller.php:2369
@@ -7941,7 +7957,7 @@ msgstr "为重新赋值提供了无效的资源ID。"
 #: includes/api/class-wc-rest-product-reviews-controller.php:155
 #: includes/api/class-wc-rest-product-variations-controller.php:611
 #: includes/api/class-wc-rest-products-controller.php:84
-#: includes/api/class-wc-rest-products-controller.php:1430
+#: includes/api/class-wc-rest-products-controller.php:1431
 #: includes/api/class-wc-rest-setting-options-controller.php:81
 #: includes/api/class-wc-rest-shipping-methods-controller.php:53
 #: includes/api/class-wc-rest-shipping-zones-controller.php:279
@@ -8230,7 +8246,7 @@ msgstr "项目ID。"
 #: includes/api/class-wc-rest-customer-downloads-controller.php:103
 #: includes/api/class-wc-rest-order-refunds-controller.php:429
 #: includes/api/class-wc-rest-orders-controller.php:1152
-#: includes/api/class-wc-rest-products-controller.php:1436
+#: includes/api/class-wc-rest-products-controller.php:1437
 #: includes/api/v1/class-wc-rest-order-refunds-controller.php:380
 #: includes/api/v1/class-wc-rest-orders-controller.php:1218
 #: includes/api/v1/class-wc-rest-products-controller.php:1740
@@ -8525,7 +8541,7 @@ msgstr "示例："
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:593
 #: includes/admin/settings/class-wc-settings-accounts.php:128
 #: includes/admin/views/html-admin-page-product-export.php:40
-#: includes/class-wc-query.php:122 includes/wc-account-functions.php:102
+#: includes/class-wc-query.php:121 includes/wc-account-functions.php:102
 #: templates/emails/email-downloads.php:25
 #: templates/emails/plain/email-downloads.php:23
 #: templates/order/order-downloads.php:25
@@ -8533,7 +8549,7 @@ msgid "Downloads"
 msgstr "下载"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:146
-#: includes/class-wc-query.php:128 includes/wc-account-functions.php:103
+#: includes/class-wc-query.php:127 includes/wc-account-functions.php:103
 msgid "Addresses"
 msgstr "地址"
 
@@ -8698,7 +8714,7 @@ msgid "Endpoint for the \"My account &rarr; Payment methods\" page."
 msgstr "我的账户 &rarr; 支付方式的端点"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:155
-#: includes/class-wc-query.php:131 includes/wc-account-functions.php:104
+#: includes/class-wc-query.php:130 includes/wc-account-functions.php:104
 msgid "Payment methods"
 msgstr "支付方式"
 
@@ -8938,7 +8954,7 @@ msgstr "ID 无效。"
 #: includes/abstracts/abstract-wc-rest-crud-controller.php:419
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:434
 #: includes/api/class-wc-rest-product-variations-controller.php:483
-#: includes/api/class-wc-rest-products-controller.php:1337
+#: includes/api/class-wc-rest-products-controller.php:1338
 #: includes/api/v1/class-wc-rest-products-controller.php:1656
 msgid "Sorry, you are not allowed to delete %s."
 msgstr "抱歉，您未被允许删除%s。"
@@ -8947,7 +8963,7 @@ msgstr "抱歉，您未被允许删除%s。"
 #: includes/abstracts/abstract-wc-rest-crud-controller.php:433
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:447
 #: includes/api/class-wc-rest-product-variations-controller.php:499
-#: includes/api/class-wc-rest-products-controller.php:1368
+#: includes/api/class-wc-rest-products-controller.php:1369
 #: includes/api/v1/class-wc-rest-products-controller.php:1683
 msgid "The %s does not support trashing."
 msgstr "%s 不支持回收站。"
@@ -8956,7 +8972,7 @@ msgstr "%s 不支持回收站。"
 #: includes/abstracts/abstract-wc-rest-crud-controller.php:440
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:453
 #: includes/api/class-wc-rest-product-variations-controller.php:508
-#: includes/api/class-wc-rest-products-controller.php:1379
+#: includes/api/class-wc-rest-products-controller.php:1380
 #: includes/api/v1/class-wc-rest-products-controller.php:1689
 msgid "The %s has already been deleted."
 msgstr "%s 已被删除。"
@@ -8965,7 +8981,7 @@ msgstr "%s 已被删除。"
 #: includes/abstracts/abstract-wc-rest-crud-controller.php:450
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:463
 #: includes/api/class-wc-rest-product-variations-controller.php:520
-#: includes/api/class-wc-rest-products-controller.php:1393
+#: includes/api/class-wc-rest-products-controller.php:1394
 #: includes/api/v1/class-wc-rest-order-notes-controller.php:316
 #: includes/api/v1/class-wc-rest-products-controller.php:1700
 #: includes/api/v1/class-wc-rest-webhooks-controller.php:469
@@ -9191,7 +9207,7 @@ msgstr "无效的文章ID。"
 #: includes/abstracts/abstract-wc-rest-crud-controller.php:402
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:149
 #: includes/api/class-wc-rest-product-variations-controller.php:464
-#: includes/api/class-wc-rest-products-controller.php:1308
+#: includes/api/class-wc-rest-products-controller.php:1309
 #: includes/api/v1/class-wc-rest-webhooks-controller.php:303
 #: includes/api/v1/class-wc-rest-webhooks-controller.php:460
 msgid "Invalid ID."
@@ -10333,7 +10349,7 @@ msgstr "搜索配送类型"
 msgid "Payment"
 msgstr "Payment"
 
-#: includes/class-wc-query.php:103
+#: includes/class-wc-query.php:102
 #: includes/shortcodes/class-wc-shortcode-checkout.php:144
 msgid "Pay for order"
 msgstr "为订单付款"
@@ -10937,7 +10953,7 @@ msgstr "选择选项"
 #. translators: %s: order number
 #. translators: %s: Order ID.
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:340
-#: includes/class-wc-query.php:119
+#: includes/class-wc-query.php:118
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:623
 #: templates/emails/email-order-details.php:36
 msgid "Order #%s"
@@ -11774,7 +11790,7 @@ msgstr "帐号"
 msgid "Account name"
 msgstr "帐户名"
 
-#: includes/class-wc-query.php:125
+#: includes/class-wc-query.php:124
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:123
 #: includes/wc-account-functions.php:105
 msgid "Account details"
@@ -13575,8 +13591,8 @@ msgstr "无效的产品产品分类号码"
 msgid "A product category with the provided ID could not be found"
 msgstr "找不到与您提供的号码匹配的产品分类"
 
-#: includes/api/class-wc-rest-products-controller.php:412
 #: includes/api/class-wc-rest-products-controller.php:413
+#: includes/api/class-wc-rest-products-controller.php:414
 #: includes/api/legacy/v1/class-wc-api-products.php:459
 #: includes/api/legacy/v1/class-wc-api-products.php:460
 #: includes/api/legacy/v2/class-wc-api-products.php:1615
@@ -15001,7 +15017,7 @@ msgid "Endpoint for the \"Checkout &rarr; Add payment method\" page."
 msgstr "结算 &rarr;添加支付方式页面的端点"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:197
-#: includes/class-wc-query.php:134
+#: includes/class-wc-query.php:133
 #: templates/myaccount/form-add-payment-method.php:53
 #: templates/myaccount/payment-methods.php:80
 msgid "Add payment method"
@@ -15012,7 +15028,7 @@ msgid "Endpoint for the \"Checkout &rarr; Order received\" page."
 msgstr "结算 &rarr; 已收到订单页面的端点"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:188
-#: includes/class-wc-query.php:106
+#: includes/class-wc-query.php:105
 msgid "Order received"
 msgstr "已收到订单"
 
@@ -15148,7 +15164,7 @@ msgstr "库存状态"
 
 #: includes/admin/meta-boxes/views/html-product-data-inventory.php:72
 #: includes/admin/meta-boxes/views/html-variation-admin.php:209
-#: includes/api/class-wc-rest-products-controller.php:1663
+#: includes/api/class-wc-rest-products-controller.php:1664
 #: includes/api/v1/class-wc-rest-products-controller.php:1952
 msgid "Controls whether or not the product is listed as \"in stock\" or \"out of stock\" on the frontend."
 msgstr "控制在前端是否产品被列为\"有货\"或\"缺货\" 。"
@@ -16034,7 +16050,7 @@ msgid "Regular price"
 msgstr "常规售价"
 
 #: includes/api/class-wc-rest-product-variations-controller.php:757
-#: includes/api/class-wc-rest-products-controller.php:1647
+#: includes/api/class-wc-rest-products-controller.php:1648
 #: includes/api/v1/class-wc-rest-products-controller.php:1936
 #: includes/api/v1/class-wc-rest-products-controller.php:2396
 #: includes/api/v1/class-wc-rest-taxes-controller.php:635
@@ -16081,7 +16097,7 @@ msgstr "\"我的账户 &rarr; 忘记密码\"页面的端点"
 #: includes/admin/class-wc-admin-customize.php:79
 #: includes/admin/class-wc-admin-menus.php:280
 #: includes/admin/settings/class-wc-settings-accounts.php:164
-#: includes/class-wc-query.php:137
+#: includes/class-wc-query.php:136
 msgid "Lost password"
 msgstr "忘记密码"
 
@@ -16270,7 +16286,7 @@ msgid "Revoke access"
 msgstr "撤销访问"
 
 #. translators: 1: variation id 2: product name
-#: includes/api/legacy/class-wc-rest-legacy-products-controller.php:531
+#: includes/api/legacy/class-wc-rest-legacy-products-controller.php:532
 #: includes/api/legacy/v2/class-wc-api-products.php:1288
 #: includes/api/legacy/v3/class-wc-api-products.php:1783
 #: includes/api/v1/class-wc-rest-products-controller.php:1372
@@ -17677,7 +17693,7 @@ msgstr "电子邮件"
 #: includes/admin/class-wc-admin-reports.php:47
 #: includes/admin/reports/class-wc-report-customer-list.php:210
 #: includes/admin/settings/class-wc-settings-accounts.php:110
-#: includes/class-wc-post-types.php:337 includes/class-wc-query.php:113
+#: includes/class-wc-post-types.php:337 includes/class-wc-query.php:112
 #: includes/wc-account-functions.php:101
 msgid "Orders"
 msgstr "订单"
@@ -18196,7 +18212,7 @@ msgstr "Keys/Apps"
 msgid "Action failed. Please refresh the page and retry."
 msgstr "动作失败。请刷新页面重试。"
 
-#. #-#-#-#-#  woocommerce-code.pot (WooCommerce 3.3.4)  #-#-#-#-#
+#. #-#-#-#-#  woocommerce-code.pot (WooCommerce 3.3.5)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: includes/admin/class-wc-admin-assets.php:89
 #: includes/admin/class-wc-admin-menus.php:62

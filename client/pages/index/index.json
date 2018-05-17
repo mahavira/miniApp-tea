@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "南普號普洱茶"
+  "navigationBarTitleText": "南普號普洱茶",
+  "enablePullDownRefresh": true
 }

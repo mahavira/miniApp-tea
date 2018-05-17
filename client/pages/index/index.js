@@ -7,17 +7,18 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    articles: [],
-    products: []
+    homelist: []
   },
   onLoad() {
-    this.fetchArticle()
-    this.fetchProduct()
+    this.fetchHomelist()
+    this.fetchSwiper()
+  },
+  onPullDownRefresh() {
+    this.fetchHomelist()
     this.fetchSwiper()
   },
   fetchSwiper () {
     api('/acf/v3/swiper').then(res => {
-      console.log(res)
       var data = res.map(n => {
         return n.acf
       })
@@ -27,30 +28,23 @@ Page({
     }).catch(res => {
     })    
   },
-  fetchProduct() {
-    api('/wc/v2/products', {
-      per_page: 5,
+  fetchHomelist() {
+    api('/wp/v2/homelist', {
+      per_page: 10,
       type: 'grouped'
     }).then(res => {
+      var data = res.map(n => {
+        return n.acf
+      })
       this.setData({
-        products: res
+        homelist: data
       })
     }).catch(res => {
     })
   },
-  fetchArticle() {
-    api('/wp/v2/posts', {
-      per_page: 5,
-      context: 'embed'
-    }).then(res => {
-      this.setData({
-        articles: res
-      })
-    }).catch(res => {
-    })
-  },
-  navigator (e) {
+  navToDetail (e) {
     var data = e.target.dataset.target
+    console.log(data)
     var id = data.ID
     var type = data.post_type == 'post' ? 'article' : 'product'
     var url = `/pages/${type}-detail/${type}-detail?id=${id}`

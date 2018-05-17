@@ -248,6 +248,7 @@ class WC_REST_Products_Controller extends WC_REST_Legacy_Products_Controller {
 				'taxonomy' => 'product_visibility',
 				'field'    => 'name',
 				'terms'    => 'featured',
+				'operator' => true === $request['featured'] ? 'IN' : 'NOT IN',
 			);
 		}
 
@@ -2042,6 +2043,7 @@ class WC_REST_Products_Controller extends WC_REST_Legacy_Products_Controller {
 	 */
 	public function get_collection_params() {
 		$params = parent::get_collection_params();
+
 		$params['slug']           = array(
 			'description'       => __( 'Limit result set to products with a specific slug.', 'woocommerce' ),
 			'type'              => 'string',

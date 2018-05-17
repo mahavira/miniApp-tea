@@ -1520,8 +1520,8 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		}
 
 		if ( ! empty( $schema['properties']['featured_media'] ) ) {
-			//$data['featured_media'] = (int) get_post_thumbnail_id( $post->ID );
-			$data['featured_media'] = get_the_post_thumbnail_url( $post->ID );
+			// $data['featured_media'] = (int) get_post_thumbnail_id( $post->ID );
+			$data['featured_media'] = get_the_post_thumbnail_url( $post );
 		}
 
 		if ( ! empty( $schema['properties']['parent'] ) ) {

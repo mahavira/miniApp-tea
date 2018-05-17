@@ -2,16 +2,14 @@
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{swipers}}" wx:key="{{index}}">
     <swiper-item>
-      <image mode="aspectFill" src="{{item.image.url}}" class="slide-image" bindtap="navigator" data-target="{{item.linkto[0]}}"/>
+      <image mode="aspectFill" src="{{item.image}}" class="slide-image" bindtap="navToDetail" data-target="{{item.target[0]}}"/>
     </swiper-item>
   </block>
 </swiper>
 
 <view class="container">
-  <navigator class='box' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
-    <image mode="aspectFill" src="{{item.featured_media}}" class="image"/>
-  </navigator>
-  <navigator class='box' wx:for="{{products}}" wx:key="{{index}}" url="/pages/product-detail/product-detail?id={{item.id}}">
-    <image mode="aspectFill" src="{{item.images[0].src}}" class="image"/>
-  </navigator>
+  <view class='box' wx:for="{{homelist}}" wx:key="{{index}}">
+    <image mode="aspectFill" src="{{item.image.url}}" class="image" bindtap="navToDetail"
+   data-target="{{item.target[0]}}"/>
+  </view>
 </view>

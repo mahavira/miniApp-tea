@@ -420,8 +420,6 @@ class WP_REST_Request implements ArrayAccess {
 	 * @return array Map of key to value.
 	 */
 	public function get_params() {
-		// echo json_encode($GLOBALS['ssjedcw']);
-		// exit;
 		$order = $this->get_parameter_order();
 		$order = array_reverse( $order, true );
 
