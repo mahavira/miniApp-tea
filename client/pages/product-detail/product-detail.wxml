@@ -8,9 +8,12 @@
     <view class='price-extra-item'>原价： <text class='regular_price'>￥{{product.regular_price}}</text></view>
     <view class='price-extra-item adder'>北京仓</view>
   </view>
+  <view style='text-align:right;padding-top:20px'>
+   <button open-type="contact" size="mini">我想要买</button>
+  </view>
 </view>
 
-<view class='products'>
+<view class='products' wx:if="{{products.length}}">
   <navigator class='product' wx:for="{{products}}" wx:key="index" url="/pages/product-detail/product-detail?id={{item.id}}">
     <image mode="aspectFill" src='{{item.images[0].name}}' src='{{item.images[0].src}}'></image>
     <view class='title'>{{item.name}}</view>

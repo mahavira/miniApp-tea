@@ -18,7 +18,7 @@
 
 <view class='products'>
   <navigator class='product' wx:for="{{products}}" wx:key="index" url="/pages/product-detail/product-detail?id={{item.id}}">
-    <image mode="aspectFill" src='{{item.images[0].name}}' src='{{item.images[0].src}}'></image>
+    <image class='image' mode="aspectFill" src='{{item.images[0].name}}' src='{{item.images[0].src}}'></image>
     <view class='title'>{{item.name}}</view>
     <view class='money'>
       <text class='discount'>￥{{item.price}}</text>

@@ -1,7 +1,6 @@
 /**index.wxss**/
 .container{
-  /* margin:15px; */
-  
+   margin:15px; 
 }
 .swiper{
   background: #000;

@@ -4,14 +4,15 @@
   top: 0;
   width: 100%;
   box-sizing: border-box;
-  padding:2px 15px 5px;
+  padding:2px 15px;
+  background: #FFF;
 }
 .filter {
   display: flex;
-  height: 21px;
+  height: 24px;
   color: #888;
   box-shadow: 0 0 2px #aaa;
-  padding: 10px;
+  padding: 8px;
   font-size: 14px;
   background: #FFF;
 }
@@ -19,8 +20,8 @@
 .filter .input {
   font-size: 14px;
   flex: 1;
-  height: 25px;
-  line-height: 25px;
+  height: 24px;
+  line-height: 24px;
   box-sizing: border-box;
   color: #aaa;
 }
@@ -54,53 +55,6 @@
 .btn.btn-search {
   width: 25px;
   position: relative;
-}
-
-.products {
-  display: flex;
-  margin: 60px 15px 0;
-  font-size: 14px;
-  flex-wrap: wrap;
-  text-align: center;
-
-}
-
-.product {
-  flex: 0 0 50%;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.product image {
-  width: 130px;
-  height: 130px;
-  display: block;
-  margin: 0 auto;
-}
-
-.product .title {
-  text-align: left;
-  padding: 0 10px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  word-wrap: break-word;
-  height: 20px;
-}
-
-.product .money {
-  text-align: left;
-  padding: 0 10px;
-}
-
-.product .money .discount {
-  color: #f00;
-  margin-right: 10px;
-}
-
-.product .money .price {
-  color: #aaa;
-  text-decoration: line-through;
 }
 
 .more {
@@ -209,4 +163,8 @@
 .term-btn.close {
   background: #fff;
   color: #000;
+}
+
+.products{
+  margin-top: 60px;
 }

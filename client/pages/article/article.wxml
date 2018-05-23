@@ -7,8 +7,8 @@
   </view>
 </view>
 <view class="container">
-  <navigator class='box' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
-    <image mode="aspectFill" src="{{item.featured_media}}" class="image"/>
+  <navigator class='post' wx:for="{{articles}}" wx:key="{{index}}" url="/pages/article-detail/article-detail?id={{item.id}}">
+    <image class="image" mode="aspectFill" src="{{item.featured_media}}"/>
     <view class='title'>{{item.title.rendered}}</view>
   </navigator>
 </view>

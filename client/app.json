@@ -39,8 +39,8 @@
       {
         "pagePath": "pages/custom/custom",
         "text": "在线客服",
-        "iconPath": "images/icon-tea.png",
-        "selectedIconPath": "images/icon-tea-active.png"
+        "iconPath": "images/icon-us.png",
+        "selectedIconPath": "images/icon-us-active.png"
       }
     ]
   }

@@ -8,8 +8,34 @@
 </swiper>
 
 <view class="container">
-  <view class='box' wx:for="{{homelist}}" wx:key="{{index}}">
-    <image mode="aspectFill" src="{{item.image.url}}" class="image" bindtap="navToDetail"
-   data-target="{{item.target[0]}}"/>
+  <view wx:for="{{homelist}}" wx:key="{{index}}">
+
+    <navigator class='post' wx:if="{{item.post_type=='post'}}" url="/pages/article-detail/article-detail?id={{item.ID}}">
+      <image class="image" mode="aspectFill" src="{{item.image}}"/>
+      <view class='title'>{{item.post_title}}</view>
+    </navigator>
+
+    <view class='products' wx:elif="{{item.post_type=='multi-product'}}">
+      <navigator class='product' wx:for="{{item.products}}" wx:key="index" url="/pages/product-detail/product-detail?id={{item.ID}}">
+        <image class='image' mode="aspectFill" src='{{item.image}}' src='{{item.image}}'></image>
+        <view class='title'>{{item.post_title}}</view>
+        <view class='money'>
+          <text class='discount'>￥{{products[item.ID].price}}</text>
+          <text class='price'>￥{{products[item.ID].regular_price}}</text>
+        </view>
+      </navigator>
+    </view>
+
+    <navigator class='product-single' wx:elif="{{item.post_type=='product'}}" url="/pages/product-detail/product-detail?id={{item.ID}}">
+      <image class='media-left' mode="aspectFill" src='{{item.image}}' src='{{item.image}}'></image>
+      <view class='media-body'>
+        <view class='title'>{{item.post_title}}</view>
+        <text class='discount'>￥{{products[item.ID].price}}</text>
+        <text class='price'>￥{{products[item.ID].regular_price}}</text>
+        <view class='description'>{{products[item.ID].description}}</view>
+      </view>
+    </navigator>
+
   </view>
+
 </view>
