@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "茶山茶事",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": true
 }

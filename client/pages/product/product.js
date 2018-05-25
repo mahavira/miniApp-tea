@@ -91,6 +91,9 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
+  onReachBottom () {
+    this.loadMore()
+  },
   toggleFilter() {
     this.setData({
       visibleFilter: !this.data.visibleFilter

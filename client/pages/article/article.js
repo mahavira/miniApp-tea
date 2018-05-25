@@ -31,6 +31,9 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
+  onReachBottom() {
+    this.loadMore()
+  },
   fetch() {
     this.setData({
       loading: true
